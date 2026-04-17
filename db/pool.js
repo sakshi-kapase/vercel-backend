@@ -1,15 +1,16 @@
-//1. imprting mysql2
-//1. imprting mysql2
-const mysql = require('mysql2');
+//1. importing mysql2
+const mysql = require("mysql2");
 
-//2. create connection
+//2. load env variables
+require("dotenv").config();
+
+//3. create connection pool
 const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'sunbeamPortal',
-    password: 'group4',
-    database: 'project',
-    
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
-//3. export pool
+//4. export pool
 module.exports = pool;
