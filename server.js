@@ -20,7 +20,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
-
+app.get('/', (req, res) => {         // 👈 Add this
+  res.json({ message: 'API is running ✅' });
+});
 // 4. routes
 app.use('/admin', adminRouter);
 app.use('/courses', coursesRouter);
