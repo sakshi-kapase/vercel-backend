@@ -16,7 +16,8 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5174',
-    'https://vercel-frontend-gilt-five.vercel.app'
+    'https://vercel-frontend-gilt-five.vercel.app',
+    'https://vercel-frontend-e1xzvwk5q-sakshi-kapases-projects.vercel.app'
   ],
   credentials: true
 }));
